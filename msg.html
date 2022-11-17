@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Messages</h2>
+
+<button onclick="ca()">Click this</button>
+<button onclick="cb()">Click me</button>
+<button onclick="cc()">Click</button>
+
+<p id="re"></p>
+
+<script>
+function ca() {
+  alert("Welcome to my Webpage!");
+}
+
+function cb() {
+  var txt;
+  if (confirm("Please click one button!")) {
+    txt = "You clicked OK!";
+  } else {
+    txt = "You clicked Cancel!";
+  }
+  document.getElementById("re").innerHTML = txt;
+}
+
+function cc() {
+  let text;
+  let person = prompt("Please enter your name:");
+  if (person == null || person == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = "Hello " + person + "! How are you today?";
+  }
+  document.getElementById("re").innerHTML = text;
+  }
+</script>
+
+</body>
+</html>
